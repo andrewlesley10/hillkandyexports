@@ -46,6 +46,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.querySelector('.main-nav');
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+            });
+        });
+    }
+
     // Contact Form Submission Handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {

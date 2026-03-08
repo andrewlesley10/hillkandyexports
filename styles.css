@@ -766,3 +766,119 @@ img {
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
 }
+
+/* ================================================
+   MOBILE RESPONSIVENESS
+   ================================================ */
+@media (max-width: 992px) {
+
+    /* Header & Navigation */
+    .site-header {
+        padding: 0 2rem;
+        height: 90px;
+    }
+
+    .header-logo {
+        height: 60px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--primary-green);
+        z-index: 1002;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.4s ease;
+        z-index: 999;
+    }
+
+    .main-nav.active {
+        transform: translateY(0);
+    }
+
+    .main-nav a {
+        font-size: 1.2rem;
+    }
+
+    /* Grids to Single Column */
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .editorial-split {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .editorial-split>* {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .editorial-image {
+        order: -1;
+        /* Always show image first on mobile if stacked */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .editorial-gallery {
+        grid-template-columns: 1fr !important;
+    }
+
+    .gallery-card {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        height: 300px !important;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Typography & Spacing Options */
+    .display-title {
+        font-size: 2.8rem;
+    }
+
+    h2.serif {
+        font-size: 2.5rem;
+    }
+
+    .hero-editorial,
+    .editorial-section,
+    .contact-section {
+        padding: 4rem 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 993px) {
+    .menu-toggle {
+        display: none;
+    }
+}

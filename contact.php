@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Basic validation
-    if ($name === '' || $email === '' || $phone === '' || $message === '') {
+    if ($name === '' || $email === '' || $message === '') {
         http_response_code(400);
         echo json_encode(['success' => false, 'message' => 'Missing required fields.']);
         exit;

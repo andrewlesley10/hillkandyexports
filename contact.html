@@ -36,6 +36,7 @@
             <a href="home" class="header-logo">
                 <img src="images/logo.png" alt="Hill Kandy Exporters Logo" class="nav-logo">
             </a>
+            <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">☰</button>
             <ul class="main-nav">
                 <li><a href="home">Home</a></li>
                 <li><a href="products">Products</a></li>
@@ -61,19 +62,19 @@
                     <div class="contact-form-container reveal">
                         <form id="contactForm" class="premium-form">
                             <div class="form-group">
-                                <label for="name">Full Name</label>
+                                <label for="name">Full Name <span style="color: #e74c3c;">*</span></label>
                                 <input type="text" id="name" name="name" placeholder="John Doe" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Email Address</label>
+                                <label for="email">Email Address <span style="color: #e74c3c;">*</span></label>
                                 <input type="email" id="email" name="email" placeholder="john@example.com" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+94 77 123 4567" required>
+                                <input type="tel" id="phone" name="phone" placeholder="+94 77 123 4567">
                             </div>
                             <div class="form-group">
-                                <label for="message">Your Message</label>
+                                <label for="message">Your Message <span style="color: #e74c3c;">*</span></label>
                                 <textarea id="message" name="message" rows="5" placeholder="How can we assist you?"
                                     required></textarea>
                             </div>
