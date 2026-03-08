@@ -1,0 +1,15 @@
+DirectoryIndex home.html home
+
+RewriteEngine On
+
+# Ensure requested filename exists as a file or directory before trying rewrites
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Internal rewrite for extensionless URLs
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
